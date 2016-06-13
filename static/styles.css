@@ -1,0 +1,44 @@
+* {
+    font-family: Helvetica;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.content {
+    width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error_div {
+    color: red;
+    font-weight: bold;
+}
+
+.log {
+    font-family: monospaced;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.logout {
+    float: right;
+    font-size: small;
+}
+
+.shot {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.salute {
+    font-size: large;
+    font-weight: bold;
+}
+
+input {
+    font-size: large;
+}

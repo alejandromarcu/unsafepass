@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% if error %}
+  <div class="error_div">Nope!! Wrong code!!</div>
+  <br/>
+  {% endif %}
+  <form action="{{ url_for('login') }}" method="post">
+      Secret Code:
+      <input type="password" name="password">
+      <input type="submit" value="Login">
+  </form>
+{% endblock %}

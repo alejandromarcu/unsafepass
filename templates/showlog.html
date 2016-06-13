@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Unsafepass</title>
+</head>
+<body>
+<div class="log">
+{% for line in log %}
+{{ line.decode('utf-8', 'ignore') }} <br/>
+{% endfor %}
+</div>
+</body>
+</html>

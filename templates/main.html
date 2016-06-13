@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/" method="post">
+  <input type="submit" value="Tirame un codigo!">
+</form>
+{% if img_url %}
+<img src="{{img_url}}" class="shot" />
+<div class="salute">
+Have a good one!!!
+</div>
+{% endif %}
+
+{% if error %}
+<br/>
+<div class="error_div">{{ error }}</div>
+<br/>
+{% endif %}
+{% endblock %}
