@@ -6,10 +6,10 @@ import picamera
 
 app = Flask(__name__)
 
-motor_pin = 12
-sensor_light_pin = 13
-sensor_pin = 6
-flash_pin = 26
+motor_pin = 24
+sensor_light_pin = 21
+sensor_pin = 19
+flash_pin = 4
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -55,7 +55,7 @@ def main():
 
 def operate():
     def turnoff():
-        GPIO.output(motor_pin, 1)
+        GPIO.output(motor_pin, 0)
         GPIO.output(sensor_light_pin, 0)
         GPIO.output(flash_pin, 0)
 
@@ -66,7 +66,7 @@ def operate():
     GPIO.setup(sensor_pin, GPIO.IN)
 
     GPIO.output(sensor_light_pin, 1)
-    GPIO.output(motor_pin, 0)
+    GPIO.output(motor_pin, 1)
 
     with picamera.PiCamera() as camera:
         camera.resolution = (640, 480)
